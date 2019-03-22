@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiClient", "src\WebApiC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{30E36F1F-E3CD-44CA-888D-4F53D92CF436}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4A2D76E9-DDB6-47E8-AD7E-6D880490F13E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiServer.UnitTests", "tests\WebApiServer.UnitTests\WebApiServer.UnitTests.csproj", "{B3B15754-E32A-4F8F-9422-24DB8E100627}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,10 @@ Global
 		{CA2FE55C-B4A1-4ADA-B3EE-7856FBE0EC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA2FE55C-B4A1-4ADA-B3EE-7856FBE0EC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA2FE55C-B4A1-4ADA-B3EE-7856FBE0EC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B15754-E32A-4F8F-9422-24DB8E100627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B15754-E32A-4F8F-9422-24DB8E100627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B15754-E32A-4F8F-9422-24DB8E100627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B15754-E32A-4F8F-9422-24DB8E100627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1A8885A0-23C5-400E-97E9-5D6E4561888D} = {30E36F1F-E3CD-44CA-888D-4F53D92CF436}
 		{CA2FE55C-B4A1-4ADA-B3EE-7856FBE0EC8B} = {30E36F1F-E3CD-44CA-888D-4F53D92CF436}
+		{B3B15754-E32A-4F8F-9422-24DB8E100627} = {4A2D76E9-DDB6-47E8-AD7E-6D880490F13E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BD7A0560-D38D-4F23-B65D-AB0D55D9F8B9}
