@@ -14,6 +14,7 @@ namespace WebApiServer.Models
         public string Name { get; set; }
 
         [Required]
+        [Column(TypeName = "decimal(4,2)")]
         public decimal Value { get; set; }
 
         [Required]
