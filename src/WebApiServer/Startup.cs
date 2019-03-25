@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApiServer.Database;
+using WebApiServer.Models;
+using WebApiServer.Repository;
 
 namespace WebApiServer
 {
@@ -22,6 +24,7 @@ namespace WebApiServer
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<MeasurementContext>(options => options.UseSqlServer(Configuration["ConnectionString:LabDb"]));
+            services.AddScoped<IMeasurementRepository<Measurement>, MeasurementRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
