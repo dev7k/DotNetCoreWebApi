@@ -32,7 +32,7 @@ namespace WebApiServer.Controllers
 
             if (measurement == null)
             {
-                return NotFound("The Masurement record couldn't be found.");
+                return NotFound("The Measurement record couldn't be found.");
             }
 
             return Ok(measurement);
@@ -58,7 +58,7 @@ namespace WebApiServer.Controllers
 
             if (measurementToUpdate == null)
             {
-                return NotFound("The Masurement record couldn't be found.");
+                return NotFound("The Measurement record couldn't be found.");
             }
 
             await _measurementRepository.Update(measurementToUpdate, measurement);
@@ -73,7 +73,7 @@ namespace WebApiServer.Controllers
 
             if (measurementToDelete == null)
             {
-                return NotFound("The Masurement record couldn't be found.");
+                return NotFound("The Measurement record couldn't be found.");
             }
 
             await _measurementRepository.Delete(measurementToDelete);
