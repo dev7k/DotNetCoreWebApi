@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 using WebApiServer.Database;
 using WebApiServer.Models;
 using WebApiServer.Repository;
@@ -25,6 +26,14 @@ namespace WebApiServer
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<MeasurementContext>(options => options.UseSqlServer(Configuration["ConnectionString:LabDb"]));
             services.AddScoped<IMeasurementRepository<Measurement>, MeasurementRepository>();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Title = "WebApiServer API",
+                    Version = "v1"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +44,11 @@ namespace WebApiServer
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApiServer API V1");
+            });
             app.UseMvc();
         }
     }
